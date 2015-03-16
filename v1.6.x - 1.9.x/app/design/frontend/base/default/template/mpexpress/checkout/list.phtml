@@ -25,10 +25,10 @@
        
         <?php if($this->getMethod()->getConfigData('acc_origin') == 'MLB'): ?>    
        <li>
-        <img src="http://imgmp.mlstatic.com/org-img/MLB/MP/BANNERS/tipo2_468X60.jpg" alt="MercadoPago - Meios de pagamento" title="MercadoPago - Meios de pagamento" width="468" height="60"/>
+        <img src="<?php echo $this->getSkinUrl('images/mpexpress/custom_468x60.jpg');?>" alt="MercadoPago - Meios de pagamento" title="MercadoPago - Meios de pagamento" width="468" height="60"/>
        </li>
        <li>
-       <?php echo $this->__('O Pagamento será realizado em uma janela de segurança do MercadoPago') ?>
+       <?php echo $this->__('Ao finalizar o pedido você será redirecionado ao MercadoPago para finalizar seu pagamento') ?>
        </li>
        <?php elseif($this->getMethod()->getConfigData('acc_origin') == 'MLM'): ?>  
        <li>
