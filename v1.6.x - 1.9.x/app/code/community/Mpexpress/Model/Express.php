@@ -54,6 +54,9 @@ class Mpexpress_Model_Express extends Mage_Payment_Model_Method_Abstract{
 
         $quote = Mage::getSingleton('checkout/session')->getQuote();
 
+        //Send order confirmation email
+        $order->sendNewOrderEmail();
+
         foreach ($order->getAllVisibleItems() as $item) {
             $prod = $model->load($item->getProductId());
 
